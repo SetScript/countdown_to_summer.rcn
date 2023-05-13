@@ -1,0 +1,18 @@
+use.ruby 'date'
+use.ruby 'colorize'
+
+while true
+    let today = DateTime.now
+    let next_summer_solstice = DateTime.new(today.year, 6, 21, 12, 0, 0)
+    let next_summer_solstice = next_summer_solstice.next_year if next_summer_solstice < today
+    let diff = (next_summer_solstice - today).to_f
+
+    let days_left = diff.to_i
+    let hours_left = ((diff - days_left) * 24).to_i
+    let mins_left = ((diff - days_left - (hours_left.to_f / 24)) * 1440).to_i
+    let secs_left = ((diff - days_left - (hours_left.to_f / 24) - (mins_left.to_f / 1440)) * 86400).to_i
+    let ms_left = ((diff - days_left - (hours_left.to_f / 24) - (mins_left.to_f / 1440) - (secs_left.to_f / 86400)) * 86400000).to_i
+
+    std.bring ("Until the summer is left:\nDays - #{days_left}\nHours - #{hours_left}\nMinuts - #{mins_left}\nSeconds - #{secs_left}\nMilliseconds - #{ms_left}").blue
+    system('cls'||'clear')
+end
