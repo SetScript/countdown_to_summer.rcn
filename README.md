@@ -9,11 +9,11 @@ clone raccoon from the [official repository](https://github.com/rcsource/raccoon
 ## Step 3
 write these 2 commands to the terminal:
 ```sh
-  gem install colorize
+  $ gem install colorize
 ```
 and
 ```sh
-  gem install date
+  $ gem install date
 ```
 ## Step 4
 write this command to the terminal:
