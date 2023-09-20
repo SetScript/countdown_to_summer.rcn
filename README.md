@@ -31,4 +31,4 @@ write this command to the terminal:
   raccoon.rb path/to/directory/main.rcn
 ```
 # What is written on?
-On Raccoon lang
+On Raccoon lang.
